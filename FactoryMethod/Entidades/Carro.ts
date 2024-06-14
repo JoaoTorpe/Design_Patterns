@@ -1,9 +1,10 @@
-class Carro extends VeiculoTerrestre{
 
+import { VeiculoTerrestre } from "./VeiculoTerrestre"
+export class Carro extends VeiculoTerrestre{
+   
     constructor(name:string){
-        super()
-        this.quantidadeRodas = 4
-        this.name = name
+        super(4,name)
+        
     }
     
     abrirPortaMalas():void{

@@ -1,18 +1,18 @@
-import { BeefBurger } from "./Entities/BeefBurger";
-import {Burger } from "./Entities/Burger"
-import { VeggieBurger } from "./Entities/VeggieBuger";
-import { BeefBurgerFactory } from "./Factories/BeefBurgerFactory";
-import {BurgerFactory}  from "./Factories/BurgerFactory";
-import { VeggieBurgerFactory } from "./Factories/VeggieBurgerFactory";
+import { Veiculo } from "./Entidades/Veiculo"
+import { FabricaDeTerrestres } from "./Fabricas/FabricaDeTerrestres"
+import { FabricaDeVeiculos } from "./Fabricas/FabricaDeVeiculos"
+import { EnumTerrestres } from "./Enums/EnumTerrestres"
+import { Moto } from "./Entidades/Moto"
+import { Carro } from "./Entidades/Carro"
+import { VeiculoTerrestre } from "./Entidades/VeiculoTerrestre"
+const fabricaDeTerestres = new FabricaDeTerrestres() 
 
+let terrestre1 : Moto = fabricaDeTerestres.fabricarVeiculo(EnumTerrestres.MOTO,"Honda") 
 
-console.log("Pedindo buger de beef\n")
-let burgerFactory : BurgerFactory = new BeefBurgerFactory()
-let beefBurger : Burger = burgerFactory.orderBurger()
+let terrestre2: Carro = fabricaDeTerestres.fabricarVeiculo(EnumTerrestres.CARRO,"Chevrolet")
 
+console.log("Moto: ",terrestre1.name)
+console.log("Carro: ",terrestre2.name)
 
-
-console.log("\nPedindo buger veggie\n")
-
- burgerFactory  = new VeggieBurgerFactory()
-let veggieBurger : Burger = burgerFactory.orderBurger()
+console.log("Moto: ",terrestre1.trocarEscapamento())
+console.log("Carro: ",terrestre2.abrirPortaMalas())

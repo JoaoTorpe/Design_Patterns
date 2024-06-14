@@ -1,9 +1,10 @@
-class Moto extends VeiculoTerrestre{
+import { VeiculoTerrestre } from "./VeiculoTerrestre"
+
+export class Moto extends VeiculoTerrestre{
 
 constructor(name:string){
-    super()
-    this.quantidadeRodas = 2
-    this.name = name
+    super(2,name)
+    
 }
 
 trocarEscapamento():void{
