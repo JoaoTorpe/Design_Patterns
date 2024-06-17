@@ -1,4 +1,3 @@
-import { Veiculo } from "./Entidades/Veiculo"
 import { FabricaDeTerrestres } from "./Fabricas/FabricaDeTerrestres"
 import { FabricaDeVeiculos } from "./Fabricas/FabricaDeVeiculos"
 import { EnumTerrestres } from "./Enums/EnumTerrestres"
@@ -16,3 +15,4 @@ console.log("Carro: ",terrestre2.name)
 
 console.log("Moto: ",terrestre1.trocarEscapamento())
 console.log("Carro: ",terrestre2.abrirPortaMalas())
+
