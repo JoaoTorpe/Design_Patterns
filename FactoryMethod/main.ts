@@ -1,18 +1,18 @@
-import { FabricaDeTerrestres } from "./Fabricas/FabricaDeTerrestres"
-import { FabricaDeVeiculos } from "./Fabricas/FabricaDeVeiculos"
-import { EnumTerrestres } from "./Enums/EnumTerrestres"
+
 import { Moto } from "./Entidades/Moto"
 import { Carro } from "./Entidades/Carro"
-import { VeiculoTerrestre } from "./Entidades/VeiculoTerrestre"
-const fabricaDeTerestres = new FabricaDeTerrestres() 
+import { Fabrica } from "./Fabricas/Fabrica"
+import { FabricaDeCarro } from "./Fabricas/FabricaDecarros"
+import { Veiculo } from "./Entidades/Veiculo"
+import { fabricaDeMotos } from "./Fabricas/FabricaDeMotos"
 
-let terrestre1 : Moto = fabricaDeTerestres.fabricarVeiculo(EnumTerrestres.MOTO,"Honda") 
+let fabrica : Fabrica
+fabrica = new FabricaDeCarro()
+let terrestre1 : Veiculo = fabrica.frabricar("kawazaki") 
 
-let terrestre2: Carro = fabricaDeTerestres.fabricarVeiculo(EnumTerrestres.CARRO,"Chevrolet")
+fabrica = new fabricaDeMotos()
+let terrestre2: Veiculo = fabrica.frabricar("Toyota")
 
 console.log("Moto: ",terrestre1.name)
 console.log("Carro: ",terrestre2.name)
-
-console.log("Moto: ",terrestre1.trocarEscapamento())
-console.log("Carro: ",terrestre2.abrirPortaMalas())
 
