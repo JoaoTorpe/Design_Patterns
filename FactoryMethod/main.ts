@@ -1,6 +1,4 @@
 
-import { Moto } from "./Entidades/Moto"
-import { Carro } from "./Entidades/Carro"
 import { Fabrica } from "./Fabricas/Fabrica"
 import { FabricaDeCarro } from "./Fabricas/FabricaDecarros"
 import { Veiculo } from "./Entidades/Veiculo"
